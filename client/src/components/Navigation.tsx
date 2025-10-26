@@ -1,5 +1,6 @@
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
@@ -42,9 +43,11 @@ export default function Navigation() {
           <Button variant="ghost" data-testid="button-login">
             Log In
           </Button>
-          <Button variant="default" data-testid="button-signup">
-            Get Started
-          </Button>
+          <Link href="/dashboard">
+            <Button variant="default" data-testid="button-signup">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>

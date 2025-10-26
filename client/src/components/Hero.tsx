@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import { Sparkles, TrendingUp, Zap } from "lucide-react";
 
 export default function Hero() {
@@ -26,13 +27,17 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2" data-testid="button-hero-start">
-                <Zap className="h-5 w-5" />
-                Start Creating Free
-              </Button>
-              <Button size="lg" variant="outline" data-testid="button-hero-demo">
-                See How It Works
-              </Button>
+              <Link href="/dashboard">
+                <Button size="lg" className="gap-2" data-testid="button-hero-start">
+                  <Zap className="h-5 w-5" />
+                  Start Creating Free
+                </Button>
+              </Link>
+              <a href="#how-it-works">
+                <Button size="lg" variant="outline" data-testid="button-hero-demo">
+                  See How It Works
+                </Button>
+              </a>
             </div>
 
             <div className="flex items-center gap-8 pt-4">
